@@ -1,0 +1,35 @@
+Date : 2020-05-17 14:41:58
+Directory : c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!
+Total : 10 files,  1284 codes, 25 comments, 324 blanks, all 1633 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |          9 |      1,277 |         25 |        315 |      1,617 |
+| Markdown |          1 |          7 |          0 |          9 |         16 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                              | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                 |         10 |      1,284 |         25 |        324 |      1,633 |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                          | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\README.md          | Markdown |          7 |          0 |          9 |         16 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\__tank renderer.py | Python   |        144 |          6 |         31 |        181 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\ai.py              | Python   |        153 |          0 |         55 |        208 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\ai_math.py         | Python   |        211 |         12 |         40 |        263 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\classes.py         | Python   |        283 |          3 |         66 |        352 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\loader.py          | Python   |         68 |          0 |         14 |         82 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\main.py            | Python   |          0 |          2 |          0 |          2 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\settings.py        | Python   |         92 |          2 |         29 |        123 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\sound.py           | Python   |         88 |          0 |         23 |        111 |
+| c:\Users\Hydra\Google Drive\Python Projects\Python Play Tanks!\tanks.py           | Python   |        238 |          0 |         57 |        295 |
+| Total                                                                             |          |      1,284 |         25 |        324 |      1,633 |
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
