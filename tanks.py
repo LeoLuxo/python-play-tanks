@@ -235,10 +235,15 @@ while not stop:
 	for y in range(FIELDHEIGHT):
 		for t in main.tanks:
 			if int(t.y+0.5) == y and not t.dead:
+				screen.blit(main.assets["tank_body_shadow"], ((t.x+0.5)*SCALEX - (BODYTILEX//2), (t.y+1.5)*SCALEY - (BODYTILEY//2)), Rect(t.get_body_sheet()[0]*BODYTILEX, t.get_body_sheet()[1]*BODYTILEY, BODYTILEX, BODYTILEY))
+				screen.blit(main.assets["tank_head_shadow"], ((t.x+0.5)*SCALEX - (HEADTILEX//2), (t.y+1.5)*SCALEY - (HEADTILEY//2)), Rect(t.get_aim_sheet()[0]*HEADTILEX, t.get_aim_sheet()[1]*HEADTILEY, HEADTILEX, HEADTILEY))
+		for t in main.tanks:
+			if int(t.y+0.5) == y and not t.dead:
 				screen.blit(main.assets["tank_" + t.type + "_body"], ((t.x+0.5)*SCALEX - (BODYTILEX//2), (t.y+1.5)*SCALEY - (BODYTILEY//2)), Rect(t.get_body_sheet()[0]*BODYTILEX, t.get_body_sheet()[1]*BODYTILEY, BODYTILEX, BODYTILEY))
 		for t in main.tanks:
 			if int(t.y+0.5) == y and not t.dead:
 				screen.blit(main.assets["tank_" + t.type + "_head"], ((t.x+0.5)*SCALEX - (HEADTILEX//2), (t.y+1.5)*SCALEY - (HEADTILEY//2)), Rect(t.get_aim_sheet()[0]*HEADTILEX, t.get_aim_sheet()[1]*HEADTILEY, HEADTILEX, HEADTILEY))
+				
 		
 		for b in main.bullets:
 			if int(b.y+0.5) == y:
