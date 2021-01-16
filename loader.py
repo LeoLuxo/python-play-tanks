@@ -57,10 +57,10 @@ def load_extra():
 	assets["bullet"].set_colorkey(COLORKEY)
 	assets["rocket"] = image.load("assets/graphics/bullet2.png").convert()
 	assets["rocket"].set_colorkey(COLORKEY)
-	assets["tank_body_shadow"] = image.load("assets/graphics/tank_body_shadow.png").convert()
-	assets["tank_body_shadow"].set_colorkey(COLORKEY)
-	assets["tank_head_shadow"] = image.load("assets/graphics/tank_head_shadow.png").convert()
-	assets["tank_head_shadow"].set_colorkey(COLORKEY)
+	assets["tank_body_outline"] = image.load("assets/graphics/tank_body_outline.png").convert()
+	assets["tank_body_outline"].set_colorkey(COLORKEY)
+	assets["tank_head_outline"] = image.load("assets/graphics/tank_head_outline.png").convert()
+	assets["tank_head_outline"].set_colorkey(COLORKEY)
 	
 	return assets
 

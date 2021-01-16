@@ -86,8 +86,8 @@ draw_body = ImageDraw.Draw(img_body, "RGB")
 img_head = Image.new("RGB", (HEADTILE*4*SHEETWIDTH, HEADTILE*3*SHEETHEIGHT), COLORKEY)
 draw_head = ImageDraw.Draw(img_head, "RGB")
 
-img_body_shadow = Image.new("RGB", (BODYTILE*4*SHEETWIDTH, BODYTILE*3*SHEETHEIGHT), COLORKEY)
-img_head_shadow = Image.new("RGB", (HEADTILE*4*SHEETWIDTH, HEADTILE*3*SHEETHEIGHT), COLORKEY)
+img_body_outline = Image.new("RGB", (BODYTILE*4*SHEETWIDTH, BODYTILE*3*SHEETHEIGHT), COLORKEY)
+img_head_outline = Image.new("RGB", (HEADTILE*4*SHEETWIDTH, HEADTILE*3*SHEETHEIGHT), COLORKEY)
 
 img_track = Image.new("RGBA", (TRACKTILE*4*SHEETWIDTH, TRACKTILE*3*SHEETHEIGHT), (255, 255, 255, 0))
 draw_track = ImageDraw.Draw(img_track, "RGBA")
@@ -104,7 +104,7 @@ for a in range(angles):
 	tank_body.sort(key=lambda x: sum([sqrt((i[2]-100)**2 + (i[0]*sin(ang) + i[1]*cos(ang)-100)**2) for i in x[0]]), reverse=True)
 	tank_head.sort(key=lambda x: sum([sqrt((i[2]-100)**2 + (i[0]*sin(ang) + i[1]*cos(ang)-100)**2) for i in x[0]]), reverse=True)
 	
-	if draw == "tank" or draw == "shadow":
+	if draw == "tank" or draw == "outline":
 		for i, p in enumerate(tank_body):
 			tp = []
 			for j in p[0]:
@@ -135,8 +135,8 @@ for a in range(angles):
 				tp.append((po[0]+(a%SHEETWIDTH)*BULLETTILE*4, po[1]+(a//SHEETWIDTH)*BULLETTILE*3))
 			draw_bullet.polygon(tp, p[1])
 
-if draw == "shadow":
-	pix_body = img_body_shadow.load()
+if draw == "outline":
+	pix_body = img_body_outline.load()
 	pix_body_copy = img_body.copy().load()
 	for x in range(SHEETWIDTH*BODYTILE*4):
 		for y in range(SHEETHEIGHT*BODYTILE*3):
@@ -146,7 +146,7 @@ if draw == "shadow":
 						if pix_body[x+i, y+j] == COLORKEY:
 							pix_body[x+i, y+j] = (0, 0, 0)
 
-	pix_head = img_head_shadow.load()
+	pix_head = img_head_outline.load()
 	pix_head_copy = img_head.copy().load()
 	for x in range(SHEETWIDTH*HEADTILE*4):
 		for y in range(SHEETHEIGHT*HEADTILE*3):
@@ -170,6 +170,9 @@ if draw == "bullet":
 if draw == "tank":
 	img_body.save("assets/graphics/tanks/" + color + "_body.png", "PNG")
 	img_head.save("assets/graphics/tanks/" + color + "_head.png", "PNG")
+if draw == "outline":
+	img_body_outline.save("assets/graphics/tank_body_outline.png", "PNG")
+	img_head_outline.save("assets/graphics/tank_head_outline.png", "PNG")
 if draw == "tracks":
 	img_track.save("assets/graphics/tank_tracks.png", "PNG")
 if draw == "bullet":
@@ -179,7 +182,7 @@ if len(sys.argv) > 2 and sys.argv[2] in "preview":
 	pass
 	img_body.show()
 	img_head.show()
-	img_body_shadow.show()
-	img_head_shadow.show()
+	img_body_outline.show()
+	img_head_outline.show()
 	img_track.show()
 	img_bullet.show()
