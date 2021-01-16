@@ -1,5 +1,5 @@
 
-#! This file isn't acutally part of the main game,
+#! This file isn't actually part of the main game,
 #! but is used to create the spritesheets for the tanks, the tracks and the bullets.
 
 from settings import *
